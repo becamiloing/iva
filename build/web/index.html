@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Calculadora IVA</title>
+    </h:head>
+    <h:body>
+
+
+        <h:form>
+            Ingrese Base:<br><input id="porcentaje" type="number" name="base" value="#{Interface}"></input></br>
+            <br></br>
+                Valor:              
+                <br><input id="porcentaje" type="number" name="porcentaje" value="#{Interface}"></input></br>
+
+                 <br><input type ="button" value="Calcular" action="Calcular"></input></br>
+
+
+        </h:form>
+        
+
+        <div id="panel-oculto">
+            <div class="main">
+                <div class="one">
+                    <div class="register">
+                        <h3>Resultados!</h3>
+                        
+                        <form id="reg-form">
+                            <div>
+                                <label for="name"> Total IVA:</label>
+                                <input type="text" id="name" placeholder="" spellcheck="false" disabled="disabled"/>
+                        </div>
+<br></br>
+                        <input style="text-align: center" type="submit" name="limpiar" value="Limpiar Datos" class="button"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
