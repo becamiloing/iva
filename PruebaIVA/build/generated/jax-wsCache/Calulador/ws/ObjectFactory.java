@@ -25,8 +25,6 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _Calcular_QNAME = new QName("http://IVA.Calculador/", "Calcular");
-    private final static QName _PerdirDatos_QNAME = new QName("http://IVA.Calculador/", "PerdirDatos");
-    private final static QName _PerdirDatosResponse_QNAME = new QName("http://IVA.Calculador/", "PerdirDatosResponse");
     private final static QName _CalcularResponse_QNAME = new QName("http://IVA.Calculador/", "CalcularResponse");
 
     /**
@@ -34,22 +32,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link PerdirDatos }
-     * 
-     */
-    public PerdirDatos createPerdirDatos() {
-        return new PerdirDatos();
-    }
-
-    /**
-     * Create an instance of {@link PerdirDatosResponse }
-     * 
-     */
-    public PerdirDatosResponse createPerdirDatosResponse() {
-        return new PerdirDatosResponse();
     }
 
     /**
@@ -75,24 +57,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://IVA.Calculador/", name = "Calcular")
     public JAXBElement<Calcular> createCalcular(Calcular value) {
         return new JAXBElement<Calcular>(_Calcular_QNAME, Calcular.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PerdirDatos }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://IVA.Calculador/", name = "PerdirDatos")
-    public JAXBElement<PerdirDatos> createPerdirDatos(PerdirDatos value) {
-        return new JAXBElement<PerdirDatos>(_PerdirDatos_QNAME, PerdirDatos.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PerdirDatosResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://IVA.Calculador/", name = "PerdirDatosResponse")
-    public JAXBElement<PerdirDatosResponse> createPerdirDatosResponse(PerdirDatosResponse value) {
-        return new JAXBElement<PerdirDatosResponse>(_PerdirDatosResponse_QNAME, PerdirDatosResponse.class, null, value);
     }
 
     /**

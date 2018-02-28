@@ -18,22 +18,14 @@ import javax.ejb.Stateless;
 @Stateless()
 public class Calulador {
 
-        @WebMethod(operationName = "Calcular")
-    public double Calcular(@WebParam(name = "Base") double Base, @WebParam(name = "Porcentaje") Double Porcentaje) {
-    Base=Base * Porcentaje / 100;
-        return Base ;
-    }
-    
-    @WebMethod(operationName = "PerdirDatos")
-    public double PerdirDatos(@WebParam(name = "producto1") double producto1, @WebParam(name = "producto2") double producto2) {
-        double Base = producto1+producto2;
-        return Base;
-    }
+
 
     /**
      * Web service operation
      */
-
-
-  
+    @WebMethod(operationName = "Calcular")
+    public double Calcular(@WebParam(name = "Base") double Base, @WebParam(name = "Porcentaje") Double Porcentaje) {
+    Base=Base * Porcentaje / 100;
+        return Base ;
+    }
 }

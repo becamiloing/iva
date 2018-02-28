@@ -33,22 +33,5 @@
         <delete dir="${build.generated.dir}/jax-wsCache/Calulador"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
     </target>
-    <target name="wsimport-client-Calulador_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Calulador_1"/>
-        <property name="wsdl-Calulador_1" location="xml-resources/web-service-references/Calulador_1/wsdl/localhost_8080/Calulador/Calulador.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Calulador_1" destdir="${build.generated.dir}/jax-wsCache/Calulador_1" wsdl="${wsdl-Calulador_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Calulador/Calulador?WSDL" xnocompile="true" xendorsed="true" package="ws.suma.productos">
-            <depends file="${wsdl-Calulador_1}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Calulador_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Calulador_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-Calulador_1" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/Calulador_1"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/ws/suma/productos"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-Calulador, wsimport-client-Calulador_1"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-Calulador"/>
 </project>
